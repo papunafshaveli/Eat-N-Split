@@ -3,9 +3,10 @@
 import React from "react";
 import Button from "./Button";
 
-export default function Friend({ friend }) {
+export default function Friend({ friend, onSelection, selectedFriend }) {
+  console.log(selectedFriend);
   return (
-    <li>
+    <li className="selected">
       <img src={friend.image} alt={friend.name} />
       <h3>{friend.name}</h3>
 
@@ -23,7 +24,7 @@ export default function Friend({ friend }) {
 
       {friend.balance === 0 && <p>You and your {friend.name} are even</p>}
 
-      <Button>select</Button>
+      <Button onClick={() => onSelection(friend)}>select</Button>
     </li>
   );
 }
