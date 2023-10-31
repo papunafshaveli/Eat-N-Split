@@ -20,7 +20,6 @@ export default function FormAddFriend({ onAddFriend }) {
     };
 
     onAddFriend(newFriend);
-
     setName("");
     setImage("ttps://i.pravatar.cc/48");
   };
